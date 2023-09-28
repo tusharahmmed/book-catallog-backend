@@ -27,3 +27,10 @@ enum USER_ROLE {
   admin
   customer
 }
+
+model Category {
+  id    String @id @default(uuid())
+  title String
+
+  @@map("categories")
+}
