@@ -15,6 +15,12 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// root route
+app.get('/', (req: Request, res: Response) => {
+  res.send('Book Catallog app...');
+});
+
+// application routes
 app.use('/api/v1', applicationRoutes);
 
 //global error handler
