@@ -22,7 +22,6 @@ const signup = async (payload: User) => {
   return passwordRemoved;
 };
 const signin = async (payload: Pick<User, 'email' | 'password'>) => {
-  console.log(payload);
   const { email, password } = payload;
   // find user
   const user = await prisma.user.findUnique({

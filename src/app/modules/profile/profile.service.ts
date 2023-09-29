@@ -4,7 +4,6 @@ import prisma from '../../../shared/prisma';
 import { excludeFields } from '../../../shared/utils';
 
 const getProfile = async (user: JwtPayload) => {
-  console.log(user);
   const result = await prisma.user.findUnique({
     where: {
       id: user.id,
